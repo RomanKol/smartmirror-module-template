@@ -1,0 +1,21 @@
+{
+  "name": "smartmirror-module-template",
+  "version": "1.0.0",
+  "description": "template for a smartmirror module",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Roman Kollatschny",
+  "license": "MIT",
+  "dependencies": {
+    "express": "^4.13.4",
+    "jade": "^1.11.0"
+  },
+  "smartmirror": {
+    "hello": {
+      "type": "string",
+      "desc": "Hello"
+    }
+  }
+}
