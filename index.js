@@ -12,12 +12,12 @@ app.set('view engine', 'jade');
 app.get('/', function (req, res) {
 
   let pckg = fs.readFileSync('package.json');
-  let pckg = JSON.parse(pckg);
+  pckg = JSON.parse(pckg);
 
   let params = {};
   params.data = true;
   let widget = {};
-  widget.id = '1234567890';
+  widget._id = '1234567890';
   widget.size = pckg.smartmirror.size[0];
 
   controller.get(params)
