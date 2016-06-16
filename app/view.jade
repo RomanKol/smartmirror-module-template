@@ -1,4 +1,17 @@
-section
-  header
-    h1 Hello #{hello}
+//- Layout after here
+header
+  h1 data.hello
+
+//- Inline scripts after here
+script.
+    // Get the module element
+    var module = document.getElementById('widget-#{widget.id}');
+
+    // Get the elements inside your module element
+    var moduleElement = module.querySelector('h1');
+
+    // Do some fancy stuff
+    moduleElement.innerText = '#{data.hello} !!!';
+
+
 

@@ -4,10 +4,10 @@ exports.get = function(params) {
   // Return new Promise
   return new Promise((resolve, reject) => {
 
-    if(params.hello)
-      resolve(({hello: params.hello}));
+    if(params.data)
+      resolve(({hello: 'Hello World'}));
     else {
-      reject(new Error('No parameter definded'));
+      reject(new Error('Nope'));
     }
 
   });

@@ -13,9 +13,14 @@
     "jade": "^1.11.0"
   },
   "smartmirror": {
-    "hello": {
-      "type": "string",
-      "desc": "Hello"
-    }
+    "settings": {
+      "hello": {
+        "type": "string",
+        "desc": "Hello"
+      }
+    },
+    "size": [
+      "4x2"
+    ]
   }
 }
