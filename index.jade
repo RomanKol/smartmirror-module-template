@@ -5,13 +5,19 @@ html
     style.
       body {
         background: rgba(120,120,120,1);
-        color: white; }
+        color: white;
+        margin: 0;
+        overflow: hidden;
+        padding: 20px;
+      }
 
       main {
-        width: 100%;
-        padding-bottom: 56.25%;
+        position: absolute;
+        width: 1920px;
+        height: 1080px;
         background-color: rgba(0,0,0,1);
         position: relative;
+        transform-origin: top left;
       }
 
       a {
@@ -47,7 +53,28 @@ html
 
   body
 
+
     main.grid
 
       section(id="widget-#{widget._id}" class="size-#{widget.size}" data-widget="#{widget.id}" data-x=0 data-y=0).widget
         include ./app/view.jade
+
+    script.
+
+      document.addEventListener('DOMContentLoaded', scale);
+      window.addEventListener('resize', scale);
+      function scale() {
+
+        mainEl = document.querySelector('.grid');
+
+        scale = Math.min(
+          (window.innerHeight - 40) / 1080,
+          (window.innerWidth - 40) / 1920
+        );
+
+        mainEl.style.transform = 'scale(' + scale  + ')';
+
+      }
+
+
+
