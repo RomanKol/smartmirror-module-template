@@ -9,6 +9,9 @@
   "author": "Roman Kollatschny",
   "license": "MIT",
   "dependencies": {
+    "log": "^1.4.0"
+  },
+  "devDependencies": {
     "express": "^4.13.4",
     "jade": "^1.11.0"
   },
