@@ -11,10 +11,15 @@ style.
 //- Inline scripts after here
 script.
     // Get the module element
-    var module = document.getElementById('widget-#{widget._id}');
+    var module = document.getElementById('#{widget._id}');
 
     // Get the elements inside your module element
     var moduleElement = module.querySelector('h1');
 
     // Do some fancy stuff
     moduleElement.innerText = '#{data.hello} !!!';
+
+    if widget.gestureSupport && widget.gesture != null
+      socket.on('#{widget.gesture.gestureType}', function(data) {
+        // your function here
+      });
